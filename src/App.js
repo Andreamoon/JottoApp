@@ -1,4 +1,6 @@
 import React from "react";
+import Congrats from "./Congrats";
+import GuessedWords from "./GuessedWords";
 import "./app.css";
 
 export function App() {
@@ -19,20 +21,12 @@ export function App() {
     }
   }
   return (
-    <div data-test="component-app" className="App">
-      <h1 data-test="counter-display">
-        The counter is currently&nbsp;
-        <span data-test="count">{count}</span>
-      </h1>
-      {displayMsg ? (
-        <h1 data-test="display-msg">Counter must be plus than 0</h1>
-      ) : null}
-      <button data-test="increment-button" onClick={() => increment()}>
-        Increment counter
-      </button>
-      <button data-test="decrement-button" onClick={() => decrement()}>
-        Decrement counter
-      </button>
+    <div data-test="component-app" className="container">
+      Jotto
+      <Congrats success={true} />
+      <GuessedWords
+        guessedWords={[{ guessedWord: "train", letterMatchCount: 3 }]}
+      />
     </div>
   );
 }
