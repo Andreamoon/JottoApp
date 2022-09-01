@@ -1,32 +1,20 @@
 import React from "react";
 import Congrats from "./Congrats";
 import GuessedWords from "./GuessedWords";
+import Input from "./Input";
 import "./app.css";
 
 export function App() {
-  const [count, setCount] = React.useState(0);
-  const [displayMsg, setDislayMsg] = React.useState(false);
-  function increment() {
-    setCount(count + 1);
-    if (count === 0) {
-      setDislayMsg(false);
-    }
-  }
-  function decrement() {
-    if (count > 0) {
-      setCount(count - 1);
-      setDislayMsg(false);
-    } else {
-      setDislayMsg(true);
-    }
-  }
+  // TODO: get props from shared state
+  const success = false;
+  const secretWord = "party";
+  const guessedWords = [];
   return (
     <div data-test="component-app" className="container">
       <h1>Jotto</h1>
-      <Congrats success={true} />
-      <GuessedWords
-        guessedWords={[{ guessedWord: "train", letterMatchCount: 3 }]}
-      />
+      <Congrats success={success} />
+      <Input success={success} secretWord={secretWord} />
+      <GuessedWords guessedWords={guessedWords} />
     </div>
   );
 }
