@@ -1,3 +1,5 @@
+import { actionTypes } from "../../actions/__mocks__";
+
 /**
  *
  * @function successReducer
@@ -6,6 +8,12 @@
  * @return {boolean} - new success state.
  */
 
-export default (state, action) => {
-  return null;
+
+export default (state = false, action) => {
+  switch (action.type) {
+    case actionTypes.CORRECT_GUESS:
+      return true;
+    default:
+      return state;
+  }
 };
