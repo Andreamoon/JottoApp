@@ -1,9 +1,6 @@
-import axios from "axios";
-
-export const getSecretWord = () => {
-  //TODO write action action in redux and context action
-
-  
-  // return response from server
-  return axios.get("http://localhost:3030").then((response) => response.data);
+module.exports = {
+  ...jest.requireActual(".."),
+  __esModule: true,
+  //  TODO update return value for redux / context implementation
+  getSecretWord: jest.fn().mockReturnValue(Promise.resolve("party")),
 };
