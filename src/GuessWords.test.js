@@ -1,8 +1,8 @@
 import React from "react";
 import { shallow, ShallowWrapper } from "enzyme";
 import { findByTestAttr, checkProps } from "../testUtils";
-import GuessedWords from "../src/GuessedWords";
-import { configEnzyme } from "../src/setupTests";
+import GuessedWords from "./GuessedWords";
+import { configEnzyme } from "./setupTests";
 
 configEnzyme();
 const defaulProps = {

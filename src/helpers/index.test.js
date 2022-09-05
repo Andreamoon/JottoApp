@@ -1,5 +1,4 @@
-import { getLetterMatchCount } from "../src/helpers";
-
+import { getLetterMatchCount } from ".";
 describe("getLetterMatchCount", () => {
   const secretWord = "party";
   test("return correct count where there are no matching letters", () => {
@@ -14,7 +13,5 @@ describe("getLetterMatchCount", () => {
   test("return the correct count when there are duplicate letters in the guess", () => {
     const letterMatchCount = getLetterMatchCount("parka", secretWord);
     expect(letterMatchCount).toBe(3);
-
-
   });
 });

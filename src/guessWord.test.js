@@ -2,10 +2,10 @@ import "jsdom-global/register"; //at the top of file, even before importing Reac
 
 import React from "react";
 import { mount } from "enzyme";
-import { App } from "../src/App";
+import { App } from "./App";
 
 import { findByTestAttr, checkProps } from "../testUtils";
-import { configEnzyme } from "../src/setupTests";
+import { configEnzyme } from "./setupTests";
 
 configEnzyme();
 
@@ -38,7 +38,7 @@ describe.only("no words guessed", () => {
   beforeEach(() => {
     wrapper = setup({ secretWord: "party", success: false, guessedWords: [] });
   });
-  test("creates a GuessedWords table with 1 row", () => {
+  test.skip("creates a GuessedWords table with 1 row", () => {
     const guessedWordsRows = findByTestAttr(wrapper, "guessed-word");
     expect(guessedWordsRows).toHaveLength(1);
   });

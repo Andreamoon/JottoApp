@@ -2,9 +2,9 @@ import React from "react";
 
 import { shallow } from "enzyme";
 
-import Congrats from "../src/Congrats";
+import Congrats from "./Congrats";
 import { findByTestAttr, checkProps } from "../testUtils";
-import { configEnzyme } from "../src/setupTests";
+import { configEnzyme } from "./setupTests";
 const defaultProps = { success: false };
 configEnzyme();
 

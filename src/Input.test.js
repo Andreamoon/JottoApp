@@ -1,8 +1,8 @@
 import React from "react";
 import { shallow, ShallowWrapper } from "enzyme";
 import { findByTestAttr, checkProps } from "../testUtils";
-import { configEnzyme } from "../src/setupTests";
-import Input from "../src/Input";
+import { configEnzyme } from "./setupTests";
+import Input from "./Input";
 
 configEnzyme();
 

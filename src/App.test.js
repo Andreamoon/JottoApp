@@ -4,13 +4,13 @@ import React from "react";
 import { mount, shallow } from "enzyme";
 
 import { findByTestAttr, checkProps } from "../testUtils";
-import { App } from "../src/App";
-import { configEnzyme } from "../src/setupTests";
+import { App } from "./App";
+import { configEnzyme } from "./setupTests";
 configEnzyme();
 
 // activate global mock to make sure getSecretWord does't make network call
 jest.mock("../src/actions/");
-import { getSecretWord as mockGetSecretWord } from "../src/actions";
+import { getSecretWord as mockGetSecretWord } from "./actions";
 
 /**
  *
