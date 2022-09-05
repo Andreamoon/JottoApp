@@ -1,4 +1,4 @@
-import { actionTypes } from "../../actions/__mocks__";
+import { actionTypes } from "../../actions";
 import successReducer from "./successReducer";
 
 test("when previuos state is undefined, return fale", () => {

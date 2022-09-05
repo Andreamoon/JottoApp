@@ -1,4 +1,4 @@
-import { actionTypes } from "../../actions/__mocks__";
+import { actionTypes } from "../../actions";
 
 /**
  *
@@ -7,7 +7,6 @@ import { actionTypes } from "../../actions/__mocks__";
  * @param {object} action - action to be reduced.
  * @return {boolean} - new success state.
  */
-
 
 export default (state = false, action) => {
   switch (action.type) {
